@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            display: block;
+            height: 400px;
+            width: 400px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">Your Image is visible</h1>
+    <button onclick="ToggleImage()">Toggle Image</button>
+    <img id="image" src="./Pikachu  Pokemon Digital Art  Digital  Pokemon  Decor  - Etsy.jpg" alt="Image">
+
+    <script>
+        const text = document.getElementById("text");
+        text.innerText = "Your Image is visible.";
+        function ToggleImage() {
+            const image = document.getElementById("image");
+            if (image.style.opacity == 0) {
+                image.style.opacity = 100;
+                text.innerText = "Your Image is visible."
+            }else {
+                image.style.opacity = 0;
+                text.innerText = "Your Image is hidden."
+            }
+        }
+    </script>
+</body>
+</html>
